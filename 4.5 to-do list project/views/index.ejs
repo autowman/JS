@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>
+    <div class="box" id="heading">
+        <h1>
+            <%= new Date().getDate() %>
+        </h1>
+        <h3>
+            <%= listTitle %>
+        </h3>
+    </div>
+    <div class="box">
+        <% for (var i=0; i< adds.length; i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= adds[i] %>
+                </p>
+                <% } %>
+            </div>
+
+
+            <form class="item" action="/" method="post">
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                <button type="submit" name="list">+</button>
+            </form>
+    </div>
+    <%- include('partials/footer.ejs') %>

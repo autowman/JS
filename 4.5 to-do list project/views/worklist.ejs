@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+    <div class="box" id="header">
+        <h1><%= new Date().getDate() %></h1>
+        <h3><%= listTitle %></h3>
+    </div>
+    <div class="box">
+        <% if (locals.workAdds) { %>
+            <% for (var i=0; i< workAdds.length; i++) { %>
+                <div class="item">
+                    <input type="checkbox" class="check">
+                    <p>
+                        <%= workAdds[i] %>
+                    </p>
+                    <% } %>
+                        <% } else { %>
+                            <em>There is no task to display</em>
+                            <% } %>
+                <div>
+
+    </div>
+    <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit">+</button>
+    </form>
+<%- include('partials/footer.ejs') %>

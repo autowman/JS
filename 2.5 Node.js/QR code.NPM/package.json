@@ -1,0 +1,16 @@
+{
+  "name": "qr-code.npm",
+  "version": "1.0.0",
+  "description": "We are going to ganerate QR code from the URL od user input",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "autow",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.9",
+    "qr-image": "^3.2.0"
+  }
+}
